@@ -49,17 +49,19 @@ nav {
 /* ----------------------------------------
 Lists
 ------------------------------------------- */
-ul {
-	padding: 9px;
+.recent-issues li {
+	margin: 0.5em 0;
+}
+
+.recent-issues a {
+	text-decoration: none;
+	text-transform: none;
+	color: #aeafaf;
 }
 
 footer nav {
   background: inherit;
   text-align: center;
-}
-
-nav i {
-  font-size: 30px;
 }
 
 img {
@@ -70,21 +72,22 @@ section img {
   width: 40%;
 }
 
-a {
+.header-nav a {
   text-decoration: none;
   color: #aeafaf;
   margin-right: 10em;
 }
 
 i {
-  margin: 0 .2em;
+  margin: 0 1em;
   padding-top: .5em;
 }
 
 footer {
   background-color: #cdf3f7;
   text-align: center;
-	margin-top: 20%;
+	margin-top: 16%;
+	padding-top: 1em
 }
 
 main {
@@ -99,6 +102,7 @@ article {
 
 aside {
   padding: 3em;
+	width: 290%
 }
 
 .formwrapper {
@@ -109,7 +113,8 @@ aside {
 .copyright {
   border-top: 2px solid black;
   padding: 3% 0;
-  margin: 2% 0;
+  margin-top: 3em;
+	margin-bottom: 0;
 }
 
 .contact {
@@ -128,17 +133,39 @@ textarea {
   text-align: center;
 }
 
+.commentform input[type=submit] {
+	background-color: #aeafaf;
+}
+
+input[type=submit] {
+	transition: all .3s ease-in-out;
+	background-color: transparent;
+}
+
+input[type=submit]:hover{
+	background-color: #44545E;
+	color: white;
+	font-weight: 600;
+}
+
 input, textarea{
+	font-weight: 500;
+	text-transform: uppercase;
+	font-size: .82rem;
+	letter-spacing: 1.2px;
   border: 2px solid #44545E;
   margin-bottom: 12px;
-	margin-bottom: .8rem;
-	padding: 10px 10px;
-	outline: 0;
+	padding: 12px 56px;
+}
+
+.contact input[type=email] {
+	padding-left: 1em;
 }
 
 textarea {
 	width: 100%;
   height: 14em;
+	padding: 12px 11px;
 }
 
 .name-and-email {
@@ -150,7 +177,7 @@ textarea {
   width:50%;
   margin-bottom: 1em;
   height: 3em;
-  padding: 2em 2em;
+  padding: 2em 1em;
 }
 
 .name-and-email input[type=email] {
@@ -170,8 +197,6 @@ textarea {
 Media Queries
 ------------------------------------------- */
 
-
-
 @media screen and (max-width: 560px) {
   .hamburger {
 		display: block;
@@ -187,31 +212,86 @@ Media Queries
     display: none;
 	}
 
-.name-and-email input {
-  width: 100%;
+	.name-and-email input {
+	  width: 100%;
+	}
+
+	.name-and-email {
+	  flex-direction: column;
+	}
+
+	.name-and-email input[type=email] {
+	  margin-left: 0;
+	}
+
+	main {
+	  flex-direction: column;
+	  padding: 1em;
+	}
+
+	aside {
+	  display: none;
+	}
+
+	.recent-issues {
+	  display: none;
+	}
+
+	.commentform {
+	  padding: 2em;
+	}
+
+	footer input{
+		width: 70%
+	}
 }
 
-.name-and-email {
-  flex-direction: column;
-}
 
-.name-and-email input[type=email] {
-  margin-left: 0;
-}
+@media screen and (max-width: 775px) {
+  .hamburger {
+		display: block;
+		color: #fff;
+		font-size: 2rem;
+		position: absolute;
+		top: 18px;
+		left: 2px;
+	}
 
-main {
-  flex-direction: column;
-  padding: 1em;
-}
+  .header-nav {
+		/* background-color: transparent; */
+    display: none;
+	}
 
-aside {
-  width: 100%;
-}
+	.name-and-email input {
+	  width: 100%;
+	}
 
-.recent-issues {
-  display: none;
-}
+	.name-and-email {
+	  flex-direction: column;
+	}
 
-.commentform {
-  padding: 2em;
+	.name-and-email input[type=email] {
+	  margin-left: 0;
+	}
+
+	main {
+	  flex-direction: column;
+	  padding: 1em;
+	}
+
+	aside {
+	  display: none;
+	}
+
+	.recent-issues {
+	  display: none;
+	}
+
+	.commentform {
+	  padding: 2em;
+	}
+
+	footer input{
+		width: 70%
+	}
 }
