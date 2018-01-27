@@ -1,13 +1,13 @@
+/* ----------------------------------------
+Base Styles
+------------------------------------------- */
+
 * {
 	box-sizing: border-box;
 }
 
 html {
 	font-size: 15px;
-}
-
-img{
-  max-width: 100%;
 }
 
 body {
@@ -18,6 +18,25 @@ body {
 	color: #44545E;
   text-align: center;
 }
+
+img{
+  max-width: 100%;
+}
+
+p {
+  text-transform: none;
+	font-family: 'Lato', sans-serif;
+	line-height: 1.4;
+}
+
+h2 {
+  font-size: 2em;
+  font-size: 130%;
+}
+
+/* ----------------------------------------
+Nav
+------------------------------------------- */
 
 nav {
   background-color: white;
@@ -31,6 +50,10 @@ a {
   color: #aeafaf;
   margin-right: 10em;
 }
+
+/* ----------------------------------------
+Header
+------------------------------------------- */
 
 header {
   background-image: url("images/home_header_bg.jpg");
@@ -48,13 +71,8 @@ header {
 	font-size: 120%;
 }
 
-header h1,header h2 {
+header h1, header h2 {
   color: white;
-}
-
-h2 {
-  font-size: 2em;
-  font-size: 130%;
 }
 
 header h1 {
@@ -67,14 +85,12 @@ header h2 {
   letter-spacing: .25em;
 }
 
+/* ----------------------------------------
+Header
+------------------------------------------- */
+
 main {
 	padding-top: 4em;
-}
-
-p {
-  text-transform: none;
-	font-family: 'Lato', sans-serif;
-	line-height: 1.4;
 }
 
 .archive {
@@ -116,19 +132,19 @@ p {
 
 .comment input {
   width: 32%;
-  display: inline-block;
-}
-
-.comment input[type="submit"]{
-  width: 100%;
+  /* display: inline-block; */
 }
 
 .name-email-subject {
   display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: center;
+  /* flex-direction: row; */
+  /* width: 100%; */
+  /* justify-content: center; */
   justify-content: space-between;
+}
+
+.comment input[type="submit"]{
+  width: 100%;
 }
 
 .comment textarea {
@@ -147,7 +163,6 @@ input, textarea{
 
 .comment input[type=submit] {
 	background-color: #aeafaf;
-
 }
 
 button, input[type=submit] {
@@ -165,16 +180,12 @@ button, input[type=submit] {
 button:hover, input[type=submit]:hover {
 	background-color: #44545E;
 	color: white;
-	font-weight: 600;
-}
-
-.hamburger {
-	display: none;
 }
 
 /* ----------------------------------------
 Footer
 ------------------------------------------- */
+
 footer {
   background-color: #cdf3f7;
   text-align: center;
@@ -193,7 +204,8 @@ i {
 }
 
 form.contact input {
-  width:50%;
+	display: inline-block;
+  width:30%;
   margin-bottom: 1em;
   padding: 1em 1em;
 }
@@ -205,51 +217,13 @@ form.contact input {
 	margin-bottom: 0;
 }
 
+.hamburger {
+	display: none;
+}
 
 /* ----------------------------------------
 Media Queries
 ------------------------------------------- */
-
-@media screen and (max-width: 560px) {
-  .hamburger {
-		display: block;
-		color: #fff;
-		font-size: 2rem;
-		position: absolute;
-		top: 18px;
-		left: 2px;
-	}
-
-  .header-nav {
-    display: none;
-	}
-
-	header .heading {
-		font-size: 109%;
-	}
-	.archive {
-	  display: flex;
-	  flex-direction: column;
-	}
-
-	.about-article {
-		padding: 2em 4em;
-	}
-
-	.name-email-subject {
-	  display: flex;
-	  flex-direction: column;
-	}
-
-	.comment input {
-		width: 100%
-	}
-
-	.gallery {
-		padding: 4em 2em;
-	}
-}
-
 @media screen and (max-width: 775px) {
   .hamburger {
 		display: block;
@@ -267,6 +241,7 @@ Media Queries
 	header .heading {
 		font-size: 109%;
 	}
+
 	.archive {
 	  display: flex;
 	  flex-direction: column;
@@ -274,6 +249,10 @@ Media Queries
 
 	.about-article {
 		padding: 2em 4em;
+	}
+
+	.gallery {
+		padding: 4em 2em;
 	}
 
 	.name-email-subject {
@@ -284,8 +263,49 @@ Media Queries
 	.comment input {
 		width: 100%
 	}
+}
+
+@media screen and (max-width: 560px) {
+	.hamburger {
+		display: block;
+		color: #fff;
+		font-size: 2rem;
+		position: absolute;
+		top: 18px;
+		left: 2px;
+	}
+
+	.header-nav {
+		display: none;
+	}
+
+	header .heading {
+		font-size: 109%;
+	}
+
+	.archive {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.about-article {
+		padding: 2em 4em;
+	}
 
 	.gallery {
 		padding: 4em 2em;
+	}
+
+	.name-email-subject {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.comment input {
+		width: 100%
+	}
+
+	form.contact input {
+	  width: 78%;
 	}
 }

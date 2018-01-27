@@ -1,3 +1,7 @@
+/* ----------------------------------------
+Base Styles
+------------------------------------------- */
+
 * {
 	box-sizing: border-box;
 }
@@ -20,13 +24,14 @@ p {
 	line-height: 1.4;
 }
 
+/* ----------------------------------------
+Header
+------------------------------------------- */
+
 header {
-  text-align: center;
   background-image: url("images/blog_header_bg.jpg");
   background-size: cover;
   background-position: center;
-  max-width: 100%;
-  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,42 +39,8 @@ header {
 
 h1 {
   letter-spacing: .5em;
-  font-weight: bold;
   padding: 4em;
   color: white;
-}
-
-nav {
-  background-color: white;
-  margin: 1em auto;
-  display: flex;
-  justify-content: center;
-}
-
-/* ----------------------------------------
-Lists
-------------------------------------------- */
-.recent-issues li {
-	margin: 0.5em 0;
-}
-
-.recent-issues a {
-	text-decoration: none;
-	text-transform: none;
-	color: #aeafaf;
-}
-
-footer nav {
-  background: inherit;
-  text-align: center;
-}
-
-img {
-  max-width: 100%;
-}
-
-section img {
-  width: 40%;
 }
 
 .header-nav a {
@@ -78,22 +49,28 @@ section img {
   margin-right: 10em;
 }
 
-i {
-  margin: 0 1em;
-  padding-top: .5em;
+/* ----------------------------------------
+Nav
+------------------------------------------- */
+
+nav {
+  margin: 1em auto;
+  display: flex;
+  justify-content: center;
 }
 
-footer {
-  background-color: #cdf3f7;
-  text-align: center;
-	margin-top: 16%;
-	padding-top: 1em
-}
+/* ----------------------------------------
+Main
+------------------------------------------- */
 
 main {
   padding: 4em;
   display: flex;
   flex-direction: row;
+}
+
+img {
+  max-width: 100%;
 }
 
 article {
@@ -105,27 +82,19 @@ aside {
 	width: 290%
 }
 
-.formwrapper {
-  display: flex;
-  flex-direction: column;
+.recent-issues li {
+	margin: 0.5em 0;
 }
 
-.copyright {
-  border-top: 2px solid black;
-  padding: 3% 0;
-  margin-top: 3em;
-	margin-bottom: 0;
+.recent-issues a {
+	text-decoration: none;
+	text-transform: none;
+	color: #aeafaf;
 }
 
-.contact {
-  margin-top: 2em;
-}
-
-textarea {
-  border: .1em solid black;
-  width: 100%;
-  height: 5em;
-}
+/* ----------------------------------------
+Comment Form
+------------------------------------------- */
 
 .commentform {
   margin: 3em 0;
@@ -133,19 +102,23 @@ textarea {
   text-align: center;
 }
 
-.commentform input[type=submit] {
-	background-color: #aeafaf;
+.formwrapper {
+  display: flex;
+  flex-direction: column;
 }
 
-input[type=submit] {
-	transition: all .3s ease-in-out;
-	background-color: transparent;
+.name-and-email {
+  display: flex;
 }
 
-input[type=submit]:hover{
-	background-color: #44545E;
-	color: white;
-	font-weight: 600;
+.name-and-email input {
+  width:50%;
+  height: 3em;
+  padding: 2em 1em;
+}
+
+.name-and-email input[type=email] {
+  margin-left: 15px;
 }
 
 input, textarea{
@@ -158,35 +131,63 @@ input, textarea{
 	padding: 12px 56px;
 }
 
-.contact input[type=email] {
-	padding-left: 1em;
-}
-
 textarea {
 	width: 100%;
-  height: 14em;
 	padding: 12px 11px;
-}
-
-.name-and-email {
-  display: flex;
-  justify-content: center;
-}
-
-.name-and-email input {
-  width:50%;
-  margin-bottom: 1em;
-  height: 3em;
-  padding: 2em 1em;
-}
-
-.name-and-email input[type=email] {
-  margin-left: 15px;
 }
 
 .formwrapper input[type=submit] {
   width: 100%;
   height: 4em;
+	color: #44545E;
+	background-color: #aeafaf;
+}
+
+input[type=submit]:hover{
+	background-color: #44545E;
+	color: white;
+	font-weight: 600;
+}
+
+/* ----------------------------------------
+Footer
+------------------------------------------- */
+
+footer {
+  background-color: #cdf3f7;
+  text-align: center;
+	margin-top: 16%;
+	padding-top: 1em
+}
+
+footer nav {
+  background: inherit;
+  text-align: center;
+}
+
+i {
+	margin: 0 1em;
+	padding-top: .5em;
+}
+
+.contact {
+  margin-top: 2em;
+}
+
+.contact input[type=email] {
+	padding-left: 2em;
+}
+
+input[type=submit] {
+	transition: all .3s ease-in-out;
+	background-color: transparent;
+}
+
+.copyright {
+  border-top: 2px solid black;
+  padding: 3% 0;
+  margin-top: 3em;
+	margin-bottom: 0;
 }
 
 .hamburger {
@@ -196,6 +197,46 @@ textarea {
 /* ----------------------------------------
 Media Queries
 ------------------------------------------- */
+
+@media screen and (max-width: 775px) {
+	.hamburger {
+		display: block;
+		color: #fff;
+		font-size: 2rem;
+		position: absolute;
+		top: 18px;
+		left: 2px;
+	}
+
+  .header-nav {
+    display: none;
+	}
+
+	main {
+	  flex-direction: column;
+	  padding: 1em;
+	}
+
+	aside {
+	  display: none;
+	}
+
+	.commentform {
+	  padding: 2em;
+	}
+
+	.name-and-email {
+	  flex-direction: column;
+	}
+
+	.name-and-email input {
+		width: 100%;
+	}
+
+	.name-and-email input[type=email] {
+	  margin-left: 0;
+	}
+}
 
 @media screen and (max-width: 560px) {
   .hamburger {
@@ -208,20 +249,7 @@ Media Queries
 	}
 
   .header-nav {
-		/* background-color: transparent; */
     display: none;
-	}
-
-	.name-and-email input {
-	  width: 100%;
-	}
-
-	.name-and-email {
-	  flex-direction: column;
-	}
-
-	.name-and-email input[type=email] {
-	  margin-left: 0;
 	}
 
 	main {
@@ -233,62 +261,20 @@ Media Queries
 	  display: none;
 	}
 
-	.recent-issues {
-	  display: none;
-	}
-
 	.commentform {
 	  padding: 2em;
-	}
-
-	footer input{
-		width: 70%
-	}
-}
-
-
-@media screen and (max-width: 775px) {
-  .hamburger {
-		display: block;
-		color: #fff;
-		font-size: 2rem;
-		position: absolute;
-		top: 18px;
-		left: 2px;
-	}
-
-  .header-nav {
-		/* background-color: transparent; */
-    display: none;
-	}
-
-	.name-and-email input {
-	  width: 100%;
 	}
 
 	.name-and-email {
 	  flex-direction: column;
 	}
 
+	.name-and-email input {
+		width: 100%;
+	}
+
 	.name-and-email input[type=email] {
 	  margin-left: 0;
-	}
-
-	main {
-	  flex-direction: column;
-	  padding: 1em;
-	}
-
-	aside {
-	  display: none;
-	}
-
-	.recent-issues {
-	  display: none;
-	}
-
-	.commentform {
-	  padding: 2em;
 	}
 
 	footer input{
