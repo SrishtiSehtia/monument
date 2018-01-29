@@ -296,6 +296,11 @@ Media Queries
 		padding: 4em 2em;
 	}
 
+	.gallery .wrap {
+	  column-count: 2;
+	  column-gap: 2px;
+	}
+
 	.name-email-subject {
 		display: flex;
 		flex-direction: column;
