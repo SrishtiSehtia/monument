@@ -59,6 +59,7 @@ header {
   background-image: url("images/home_header_bg.jpg");
   background-size: cover;
   background-position: center;
+	background-attachment: fixed;
   height: 300px;
   max-width: 100%;
   display: flex;
@@ -124,6 +125,10 @@ main {
 
 .gallery .wrap img {
   margin: .5em;
+}
+
+.gallery img:hover {
+	opacity: .6;
 }
 
 .comment {
