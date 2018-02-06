@@ -29,7 +29,7 @@ Header
 ------------------------------------------- */
 
 header {
-  background-image: url("images/blog_header_bg.jpg");
+  background-image: url("../images/blog_header_bg.jpg");
   background-size: cover;
   background-position: center;
   display: flex;

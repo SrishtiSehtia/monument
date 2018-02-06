@@ -56,7 +56,7 @@ Header
 ------------------------------------------- */
 
 header {
-  background-image: url("images/home_header_bg.jpg");
+  background-image: url("../images/home_header_bg.jpg");
   background-size: cover;
   background-position: center;
 	background-attachment: fixed;
@@ -135,16 +135,14 @@ main {
   padding: 2em 5em;
 }
 
-.comment input {
-  width: 32%;
-  /* display: inline-block; */
+.comment span{
+	flex-basis: 33%;
+	text-align: left;
 }
 
 .name-email-subject {
   display: flex;
-  /* flex-direction: row; */
-  /* width: 100%; */
-  /* justify-content: center; */
+	flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -157,6 +155,7 @@ main {
 }
 
 input, textarea{
+	width: 100%;
 	font-weight: 500;
 	text-transform: uppercase;
 	font-size: .82rem;
@@ -185,6 +184,18 @@ button, input[type=submit] {
 button:hover, input[type=submit]:hover {
 	background-color: #44545E;
 	color: white;
+}
+
+span.error-message {
+	color: #FF0F0F;
+	font-size: 12px;
+	display: none;
+	text-transform: capitalize;
+}
+
+.error {
+	border: 2px solid #ED5254;
+	/* display: none; */
 }
 
 /* ----------------------------------------
@@ -225,7 +236,6 @@ form.contact input {
 .hamburger {
 	display: none;
 }
-
 /* ----------------------------------------
 Media Queries
 ------------------------------------------- */
